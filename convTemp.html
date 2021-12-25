@@ -3,15 +3,15 @@
 
 <h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation and returns the result:</p>
+<p>This example calls a function which performs a conversion from Celsius to Fahrenheit and returns the result:</p>
 
 <button onclick="myFunction()">Click me</button>
  <input type="text" id="demo"><br><br>
 
 <script>
-var x = prod(4, 3);
-function prod(a, b) {
-  return a * b;
+var x = prod(9/5, 32);
+function prod(a,b) {
+  return ( x * a ) + b;
 }
 function myFunction() {
   document.getElementById("demo").value = x;
