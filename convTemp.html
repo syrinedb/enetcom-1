@@ -3,19 +3,29 @@
 
 <h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation and returns the result:</p>
+<h3> Celcius en fahrenheit</h3>
+Celcius: <input type="text" oninput="CversF(this.value)" onchange="CversF(this.value)"><br><br>
 
-<button onclick="myFunction()">Click me</button>
- <input type="text" id="demo"><br><br>
-
+<b>Resultat en F</b>:<input id="outputFahrenheit" type="text">
+<br><br>
+<h3>Fahrenheit en celcius</h3>
+Fahrenheit: <input type="text" oninput="FversC(this.value)" onchange="CversF(this.value)">
+<br><br>
+<b>Resultat en C</b>: <input id="outputCelsius" type="text">
 <script>
-var x = prod(4, 3);
-function prod(a, b) {
-  return a * b;
+
+
+function CversF(val) {
+  val = parseFloat(val);
+  document.getElementById("outputFahrenheit").value=(val* 9/5) + 32 ;
 }
-function myFunction() {
-  document.getElementById("demo").value = x;
+</script>
+<script>
+function FversC(val) {
+  val = parseFloat(val);
+  document.getElementById("outputCelsius").value = (val-32) / 1.8;
 }
+
 </script>
 
 
