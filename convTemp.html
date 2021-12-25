@@ -3,18 +3,22 @@
 
 <h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a conversion from Celsius to Fahrenheit and returns the result:</p>
+<p>This example calls a function which performs a conversion from Celsius to Fahrenheit and vice versa:</p>
 
-<button onclick="myFunction()">Click me</button>
- <input type="text" id="demo"><br><br>
+<button onclick="myFunction()">Click me to convert from Fahrenheit to Celsius</button>
+ <input type="text" id="c1"><br><br>
+ <p>Result:</p> <input type="text" id="f1"><br><br>
+ <button onclick="myFunction2()">Click me to convert from from Celsius to Fahrenheit </button>
+ <input type="text" id="f2"><br><br>
+ <p>Result:</p> <input type="text" id="c2"><br><br>
+ 
 
 <script>
-var x = prod(9/5, 32);
-function prod(a,b) {
-  return ( x * a ) + b;
-}
 function myFunction() {
-  document.getElementById("demo").value = x;
+  document.getElementById("f1").value = parseFloat(document.getElementById("c1").value * 1.8) + 32 ;
+}
+function myFunction2() {
+  document.getElementById("c2").value = parseFloat(document.getElementById("f2").value -32) / 1.8 ;
 }
 </script>
 
