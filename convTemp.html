@@ -6,15 +6,18 @@
 <p>This example calls a function which performs a calculation and returns the result:</p>
 
 <button onclick="myFunction()">Click me</button>
- <input type="text" id="demo"><br><br>
-
+ <input type="number" id="c"><br><br>
+<button onclick="myF()">Click me</button>
+<input type="number" id="f"><br><br>
 <script>
-var x = prod(4, 3);
-function prod(a, b) {
-  return a * b;
-}
+
 function myFunction() {
-  document.getElementById("demo").value = x;
+  document.getElementById("c").value =(parseFloat(document.getElementById("f").value)-32)*(5/9);
+ 
+
+}
+function myF(){
+document.getElementById("f").value =(parseFloat(document.getElementById("c").value)*(9/5))+32;
 }
 </script>
 
