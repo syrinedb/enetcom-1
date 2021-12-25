@@ -4,28 +4,33 @@
 <h2>JavaScript Functions</h2>
 
 <p> Celcius en fahrenheit</p>
-Celcius: <input type="text" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)"><br><br>
- <button onclick="myFunction()">Convertir</button><br><br>
+Celcius: <input type="text"  id="output"><br><br>
+ <button onclick="temperatureConverter()">Convertir</button><br><br>
 
 
-Fahrenheit:<p id="outputFahrenheit"><br><br></p>
+Fahrenheit:<input type="text" id="outputFahrenheit"><br><br>
 <hr>
 <p>Fahrenheit en celcius</p>
-Fahrenheit: <input type="text" oninput="temperatureDeconverter(this.value)" onchange="temperatureConverter(this.value)"><br><br>
-<button onclick="myFunction()">Convertir</button><br><br>
-Celcius:<p id="outputCelsius"><br><br></p>
+Fahrenheit: <input type="text" id="output2" ><br><br>
+<button onclick="temperatureDeconverter()">Convertir</button><br><br>
+Celcius:<input type="text" id="outputCelsius"><br><br>
 <script>
 
 
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputFahrenheit").innerHTML=(valNum* 9/5) + 32 ;
+function temperatureConverter() {
+cel=document.getElementById("output").value
+x=(cel* 9/5) + 32 ;
+ valNum = parseFloat(x);
+  
+  document.getElementById("outputFahrenheit").value=valNum;
 }
 </script>
 <script>
-function temperatureDeconverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+function temperatureDeconverter() {
+fah=document.getElementById("output2").value
+y=(fah-32) / 1.8;
+  valNum = parseFloat(y);
+  document.getElementById("outputCelsius").value = valNum;
 }
 
 </script>
