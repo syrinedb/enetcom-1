@@ -3,19 +3,31 @@
 
 <h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation and returns the result:</p>
+<p> Celcius en fahrenheit</p>
+Celcius: <input type="text" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)"><br><br>
+ <button onclick="myFunction()">Convertir</button><br><br>
 
-<button onclick="myFunction()">Click me</button>
- <input type="text" id="demo"><br><br>
 
+Fahrenheit:<p id="outputFahrenheit"><br><br></p>
+<hr>
+<p>Fahrenheit en celcius</p>
+Fahrenheit: <input type="text" oninput="temperatureDeconverter(this.value)" onchange="temperatureConverter(this.value)"><br><br>
+<button onclick="myFunction()">Convertir</button><br><br>
+Celcius:<p id="outputCelsius"><br><br></p>
 <script>
-var x = prod(4, 3);
-function prod(a, b) {
-  return a * b;
+
+
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=(valNum* 9/5) + 32 ;
 }
-function myFunction() {
-  document.getElementById("demo").value = x;
+</script>
+<script>
+function temperatureDeconverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
 }
+
 </script>
 
 
