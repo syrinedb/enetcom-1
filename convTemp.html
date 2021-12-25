@@ -14,11 +14,17 @@
  
 
 <script>
+function ctof(a) {
+  return (( a * 1.8 ) + 32);
+}
+function ftoc(b) {
+  return (( b - 32 ) / 1.8);
+}
 function myFunction() {
-  document.getElementById("f1").value = parseFloat(document.getElementById("c1").value * 1.8) + 32 ;
+  document.getElementById("f1").value = ctof(parseFloat(document.getElementById("c1").value)) ;
 }
 function myFunction2() {
-  document.getElementById("c2").value = parseFloat(document.getElementById("f2").value -32) / 1.8 ;
+  document.getElementById("c2").value = ftoc(parseFloat(document.getElementById("f2").value)) ;
 }
 </script>
 
