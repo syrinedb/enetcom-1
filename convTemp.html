@@ -3,18 +3,24 @@
 
 <h2>JavaScript Functions</h2>
 
-<p>This example calls a function which performs a calculation and returns the result:</p>
+<p>This example calls a function which performs a conversation celsuis to fahrenheit and returns the result:</p>
 
-<button onclick="myFunction()">Click me</button>
- <input type="text" id="demo"><br><br>
-
+<button onclick="myFunction()">convert</button>
+ <input type="text" id="c"><br><br>
+ <button onclick="myFunctions()">convert</button>
+<input type="text" id="f"><br><br>
 <script>
-var x = prod(4, 3);
-function prod(a, b) {
+var x = prod(4  ,2 );
+function convCtoF(a , b) {
   return a * b;
 }
+
 function myFunction() {
-  document.getElementById("demo").value = x;
+  document.getElementById("f").value = parseFloat(document.getElementById("c").value)*33.2;
+  }
+function myFunctions() {
+ document.getElementById("c").value = 
+parseFloat(document.getElementById("f").value)/33.2;
 }
 </script>
 
